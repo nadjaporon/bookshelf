@@ -208,6 +208,8 @@ function createHTML() {
         // Add class
         pTagIcons.classList.add('icons');
 
+        
+
         // <i> Edit Icon
         iTagEdit = document.createElement('i');
         iTagEdit.classList.add('fas', 'fa-edit');
