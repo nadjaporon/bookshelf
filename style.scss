@@ -14,6 +14,8 @@ h1 {
 }
 
 .header {
+    position: fixed;
+    width: 100%;
     border-bottom: 8px double black;
     background-image: url("img/tom-hermans-9BoqXzEeQqM-unsplash.jpg");
     background-size: contain;
@@ -23,8 +25,6 @@ h1 {
     padding: 10px;
     padding-right: 10px;
     background-color: white;
-    position: absolute;
-    right: 0;
     border-bottom-left-radius: 5px;
     border: 2px solid black;
     border-top: 0;
@@ -55,6 +55,9 @@ h2 {
     font-size: 24px;
 }
 .books {
+    position: absolute;
+    top: 88px;
+    z-index: -1;
     display: flex;
     flex-wrap: wrap;
 }
@@ -64,12 +67,20 @@ h2 {
 .red {
     color: rgb(175, 38, 38);
 }
+.books,
+.bookForm,
+.addBook {
+    top: 88px;
+}
+
+.bookForm,
+.addBook {
+    position: fixed;
+    right: 0px;
+}
 .bookForm {
     display: none;
     background-color: black;
-    position: absolute;
-    right: 0px;
-    top: 88px;
     z-index: 999;
     width: 400px;
     padding: 20px;
