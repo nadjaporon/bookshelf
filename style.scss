@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    padding-top: 14px;
+    padding-left: 10px;
+    font-family: "Indie Flower", cursive;
+    font-size: 60px;
+    height: 80px;
+}
+
+.header {
+    border-bottom: 8px double black;
+    background-image: url("img/tom-hermans-9BoqXzEeQqM-unsplash.jpg");
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+.addBook {
+    padding: 10px;
+    padding-right: 10px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    border-bottom-left-radius: 5px;
+    border: 2px solid black;
+    border-top: 0;
+    border-right: 0;
+    cursor: pointer;
+    font-family: "Indie Flower", cursive;
+    font-size: 20px;
+}
+.addBook:hover {
+    background-color: black;
+    color: white;
+}
+.bookItem {
+    background-color: rgb(224, 210, 193);
+    width: 200px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: "Indie Flower";
+    margin: 10px;
+    padding: 15px;
+}
+.icons {
+    // cursor: pointer;
+    text-align: right;
+}
+h2 {
+    font-size: 24px;
+}
+.books {
+    display: flex;
+    flex-wrap: wrap;
+}
+.green {
+    color: rgb(74, 170, 70);
+}
+.red {
+    color: rgb(175, 38, 38);
+}
+.bookForm {
+    display: none;
+    background-color: black;
+    position: absolute;
+    right: 0px;
+    top: 88px;
+    z-index: 999;
+    width: 400px;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: rgb(170, 155, 199) 6px dotted;
+    border-width: 5px;
+    border-top: 0;
+}
+input[type="text"],
+input[type="number"] {
+    border-radius: 2px;
+    width: 350px;
+    margin-bottom: 10px;
+}
+input[type="checkbox"] {
+    margin-left: 10px;
+    transform: scale(1.5);
+}
+input[type="number"] {
+    width: 100px;
+}
+.bookForm > h2 {
+    font-family: "Indie Flower";
+    color: white;
+}
+.bookForm > label {
+    color: white;
+}
+#submit,
+#cancel {
+    margin-top: 20px;
+    position: absolute;
+    right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(116, 93, 93);
+}
+#submit:hover,
+#cancel:hover {
+    background-color: rgb(158, 129, 129);
+    color: white;
+}
+#cancel {
+    right: 100px;
+}
+#error {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    margin-left: 10px;
+    color: rgb(194, 61, 61);
+    font-style: italic;
+    font-size: 0.8rem;
+}
+i {
+    cursor: pointer;
+    margin-left: 10px;
+}
+.fa-trash:hover,
+.fa-edit:hover,
+.fa-book-open:hover {
+    color: rgb(194, 61, 61);
+}
