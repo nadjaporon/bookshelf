@@ -22,12 +22,41 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
+// localStorage.clear();
+// If Local Storage is empty fill with Example Books
 
-// if (storageAvailable('localStorage')) {
-    if (localStorage.getItem('bookshelfBook') != "") {
-        showBooks();
-    }
-// }
+if (localStorage.getItem('bookshelfBook') == null) {
+    
+    // Example Books
+
+    let newBook1 = new Book;
+    newBook1.title = "Der Prozess";
+    newBook1.author = "Franz Kafka";
+    newBook1.pages = 125;
+    newBook1.read = 'true';
+    books.push(newBook1);
+    localStorage.setItem('bookshelfBook', JSON.stringify(books));
+
+    let newBook2 = new Book;
+    newBook2.title = "Die Verwandlung";
+    newBook2.author = "Franz Kafka";
+    newBook2.pages = 80;
+    newBook2.read = 'true';
+    books.push(newBook2);
+    localStorage.setItem('bookshelfBook', JSON.stringify(books));
+
+    let newBook3 = new Book;
+    newBook3.title = "Poetry";
+    newBook3.author = "Charles Bukowski";
+    newBook3.pages = 240;
+    newBook3.read = 'false';
+    books.push(newBook3);
+    localStorage.setItem('bookshelfBook', JSON.stringify(books));
+
+    showBooks();
+} else {
+    showBooks();
+}
 
 
 addBook.addEventListener('click', () => {
@@ -74,16 +103,6 @@ window.addEventListener('click', (e) => {
         books.splice(id, 1);
 
         storeLocal(books);
-
-        /*
-        removeElement = element.parentElement.parentElement;
-        // removeElement.remove();
-
-        let testId = Array.from(removeElement.parentNode.children).indexOf(removeElement);
-
-        console.log(testId);
-        */
-
         createHTML();
     }
 
