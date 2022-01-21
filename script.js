@@ -22,7 +22,13 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
-// showBooks();
+
+// if (storageAvailable('localStorage')) {
+    if (localStorage.getItem('bookshelfBook') != "") {
+        showBooks();
+    }
+// }
+
 
 addBook.addEventListener('click', () => {
     bookForm.style.display = 'block';
