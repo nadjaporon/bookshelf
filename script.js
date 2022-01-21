@@ -22,7 +22,7 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
-showBooks();
+// showBooks();
 
 addBook.addEventListener('click', () => {
     bookForm.style.display = 'block';
